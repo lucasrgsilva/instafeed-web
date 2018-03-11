@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <nb-card>
+      <nb-card-header>Create new event</nb-card-header>
+      <nb-card-body>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Title" #title>
+        </div>
+        <div class="form-group">
+          <div class="input-group has-hash-icon">
+            <input type="text" placeholder="Tag name" class="form-control" #hashtag/>
+            <span class="input-group-btn">
+              <button class="btn btn-success btn-icon" (click)="onAdd(hashtag.value); hashtag.value=null">
+                <i class="ion-android-add"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="alert alert-success alert-tag" *ngFor="let tag of hashtags; let i = index">
+          <a class="close" aria-label="close" (click)="onRemove(i)">&times;</a>
+          <strong>#{{tag}}</strong>
+        </div>
+        <button type="button" class="btn btn-success btn-block" (click)="onStart(title.value)">View</button>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="row" id="fullscreen-gallery">
+  <!-- <div class="col-lg-4">
+    <div class="logo" [style.background-image]="'url(assets/images/kitten-default.png)'"></div>
+  </div> -->
+  <div class="col-lg-12">
+    <div class="gallery">
+      <section class="section" >
+        <div class="grid">
+          <div *ngFor="let image of images" class=item [style.background-image]="'url(' + image.images.standard_resolution.url + ')'" ></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<nb-card *ngIf="mustAuthenticate">
+  <nb-card-body class="text-center">
+    <div class="btn btn-primary" (click)="getInstagramCredentials()">Connect to Instagram</div>
+  </nb-card-body>
+</nb-card>
+<!-- <button class="btn btn-default" (click)="fullScreen()"></button> -->

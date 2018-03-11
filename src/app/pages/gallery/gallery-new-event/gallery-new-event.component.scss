@@ -1,0 +1,30 @@
+
+.input-group.has-hash-icon {
+  position: relative;
+
+  .form-control {
+    padding-left: 3rem;
+  }
+
+  &::before {
+    content: '#';
+    font-family: 'Ionicons';
+    font-size: 2rem;
+    position: absolute;
+    z-index: 100;
+    left: 1rem;
+    top: 0.25rem;
+    opacity: 0.5;
+  }
+}
+
+.alert-tag {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.close {
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
